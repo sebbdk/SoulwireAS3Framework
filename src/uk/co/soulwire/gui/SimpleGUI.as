@@ -28,7 +28,7 @@ package uk.co.soulwire.gui
 	import com.bit101.components.PushButton;
 	import com.bit101.components.RangeSlider;
 	import com.bit101.components.Style;
-
+	
 	import flash.display.Bitmap;
 	import flash.display.BitmapData;
 	import flash.display.DisplayObjectContainer;
@@ -477,7 +477,7 @@ package uk.co.soulwire.gui
 		 * you instead pass the label as a property within the options object
 		 */
 		
-		public function addComboBox(target : String, items : Array, options : Object = null) : StyledCombo
+		public function addComboBox(target : String, items : Array, options : Object = null) : ComboBox
 		{
 			options = parseOptions(target, options);
 			
@@ -491,7 +491,7 @@ package uk.co.soulwire.gui
 			params.defaultLabel = targ[prop];
 			params.numVisibleItems = Math.min(items.length, 5);
 			
-			return addControl(ComboBox, merge(params, options)) as StyledCombo;
+			return addControl(ComboBox, merge(params, options)) as ComboBox;
 		}
 		
 		/**
@@ -566,10 +566,10 @@ package uk.co.soulwire.gui
 			Style.BUTTON_FACE = 0x555555;
 			Style.DROPSHADOW = 0x000000;
 
-			Style.LIST_DEFAULT = 0x333333;
-			Style.LIST_ALTERNATE = 0x444444;
-			Style.LIST_SELECTED = 0x111111;
-			Style.LIST_ROLLOVER = 0x555555;
+			//Style.LIST_DEFAULT = 0x333333;
+			//Style.LIST_ALTERNATE = 0x444444;
+			//Style.LIST_SELECTED = 0x111111;
+			//Style.LIST_ROLLOVER = 0x555555;
 		}
 		
 		private function initToolbar() : void
